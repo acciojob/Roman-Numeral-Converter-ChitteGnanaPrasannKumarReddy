@@ -7,7 +7,20 @@ function convertToRoman(num) {
       4:['X', 10], 
       5:['V', 5], 
       6:['I', 1]
-    };
+    }; 
+
+	let result = '';
+
+  for (let i = 0; i <= 6; i++) {
+    const [symbol, value] = obj[i];
+    while (num >= value) {
+      result += symbol;
+      num -= value;
+    }
+  }
+
+  return result;
+
 
   //your code here
 
